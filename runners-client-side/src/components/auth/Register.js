@@ -7,6 +7,7 @@ export const Register = () => {
     const firstName = useRef()
     const lastName = useRef()
     const username = useRef()
+    const email = useRef()
     const mileage = useRef()
     const zipcode = useRef()
     const password = useRef()
@@ -21,7 +22,10 @@ export const Register = () => {
             const newUser = {
                 "username": username.current.value,
                 "first_name": firstName.current.value,
+                "email": email.current.value,
                 "last_name": lastName.current.value,
+                "mileage": mileage.current.value,
+                "zipcode": zipcode.current.value,
                 "bio": bio.current.value,
                 "password": password.current.value
             }
