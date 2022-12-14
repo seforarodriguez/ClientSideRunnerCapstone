@@ -1,25 +1,11 @@
 
-import { Route, Routes } from 'react-router-dom';
-import { Login } from './auth/Login';
-import { Register } from './auth/Register';
-import { ApplicationViews } from './components/views/ApplicationViews';
-import NavBar from './nav/navBar';
-import './RunnerApp.css';
+import { NavBar } from "./components/nav/NavBar"
+import { ApplicationViews } from "./components/views/ApplicationViews"
 
-function RunnerApp() {
-  return (<Routes>
-		<Route path="/" element={<Login />} />
-		<Route path="/register" element={<Register />} />
 
-		<Route path="*" element={
-				<>
-					<NavBar />
-					<ApplicationViews />
-				</>
-		} />
-	</Routes>
-    
-  );
-}
-
-export default RunnerApp;
+export const RunnerApp = () => (
+    <>
+        <NavBar />
+        <ApplicationViews />
+    </>
+)

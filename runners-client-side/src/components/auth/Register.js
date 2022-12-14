@@ -20,13 +20,12 @@ export const Register = () => {
 
         if (password.current.value === verifyPassword.current.value) {
             const newUser = {
-                "username": username.current.value,
                 "first_name": firstName.current.value,
-                "email": email.current.value,
                 "last_name": lastName.current.value,
+                "username": username.current.value,
+                "email": email.current.value,
                 "mileage": mileage.current.value,
                 "zipcode": zipcode.current.value,
-                "bio": bio.current.value,
                 "password": password.current.value
             }
 
@@ -65,16 +64,24 @@ export const Register = () => {
                     <input ref={username} type="text" name="username" className="form-control" placeholder="Username" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="inputUsername">Email</label>
+                    <input ref={email} type="text" name="email" className="form-control" placeholder="runner@run.com" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="inputUsername">Mileage</label>
+                    <input ref={mileage} type="number" name="mileage" className="form-control" placeholder="Only enter top miles you've ran ex. '7'  " required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="inputUsername">Zipcode</label>
+                    <input ref={zipcode} type="number" name="zipcode" className="form-control" placeholder="ex. 30088" required />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="inputPassword"> Password </label>
                     <input ref={password} type="password" name="password" className="form-control" placeholder="Password" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="verifyPassword"> Verify Password </label>
                     <input ref={verifyPassword} type="password" name="verifyPassword" className="form-control" placeholder="Verify password" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="verifyPassword"> Verify Password </label>
-                    <textarea ref={bio} name="bio" className="form-control" placeholder="Let other gamers know a little bit about you..." />
                 </fieldset>
                 <fieldset style={{
                     textAlign: "center"
