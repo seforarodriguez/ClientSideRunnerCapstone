@@ -24,8 +24,8 @@ export const Register = () => {
                 "last_name": lastName.current.value,
                 "username": username.current.value,
                 "email": email.current.value,
-                "mileage": mileage.current.value,
-                "zipcode": zipcode.current.value,
+                "mileage": parseInt(mileage.current.value),
+                "zipcode": parseInt(zipcode.current.value),
                 "password": password.current.value
             }
 
