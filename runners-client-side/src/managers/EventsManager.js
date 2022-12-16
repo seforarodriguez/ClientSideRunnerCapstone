@@ -22,7 +22,7 @@ export const createEvent = (event) => {
 export const getSingleEvent = (id) => {
     return fetch(`http://localhost:8000/events/${id}`, {
         headers:{
-            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+            "Authorization": `Token ${localStorage.getItem("runner_token")}`
         }
     })
         .then(response => response.json())
@@ -33,7 +33,7 @@ export const updateEvent = (event) => {
         method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Token ${localStorage.getItem("lu_token")}`
+                "Authorization": `Token ${localStorage.getItem("runner_token")}`
             },
             body: JSON.stringify(event)
         })
@@ -44,7 +44,7 @@ export const deleteEvent = (id) => {
         method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Token ${localStorage.getItem("lu_token")}`
+                "Authorization": `Token ${localStorage.getItem("runner_token")}`
             }
         })
 }

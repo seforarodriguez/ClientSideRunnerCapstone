@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getEvents } from "../../managers/EventsManager"
+import { deleteEvent, getEvents, updateEvent } from "../../managers/EventsManager"
 
 
 export const EventList = (props) => {
@@ -20,7 +20,7 @@ export const EventList = (props) => {
     return (
         <article className="allEvents">
             <section>
-                <button className="button" onClick={() => {navigate('events/new')}}> New Running Event</button>
+                <button className="button" onClick={() => {navigate("/events/new")}}> New Running Event</button>
                     
             </section>
             {
@@ -33,10 +33,12 @@ export const EventList = (props) => {
                         <div className="event__miles">Get ready! We're going to be running {event.miles_to_run} miles! </div>
                         <div className="event_organizer">Organized by {event?.organizer?.runner_full_name}</div>
 
-                                            
+                        <button className="button" onClick={() => {
+                            updateEvent(event.id).then(navigate("/events/new"))
+                            }}> 🗑 </button>                    
                         <button className="button" onClick={() => {
                             deleteEvent(event.id).then(updateEventList)
-                            }}> See Their Events </button>
+                            }}> 🗑 </button>
                     </section>
                 })
             }

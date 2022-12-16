@@ -29,7 +29,7 @@ export const RunnerList = (props) => {
                     return <section key={`runner--${runner.id}`} className="runner">
                         <div className="runner__name">This runner is called:{runner.runner_full_name}</div>
                         <div className="runner__miles">This runner has done {runner.mileage} miles </div>
-                        <div className="runner__miles">This runner's expertese is level ....??? </div>
+                        <div className="runner__miles">This runner's expertise is level ....??? </div>
                         <div className="runner__miles">This runner has done a few events so far </div>
                         <div className="runner__miles">Here goes a link for the events hes done</div>
                         
