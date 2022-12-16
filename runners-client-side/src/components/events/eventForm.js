@@ -115,7 +115,7 @@ export const EventForm = () => {
                     createEvent(event)
                         .then(() => navigate("/events"))
                 }}
-                className="btn btn-primary">Create</button>
+                className="btn btn-primary">Create new Event to Run</button>
         </form>
     )
 }

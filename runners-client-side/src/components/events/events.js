@@ -19,6 +19,10 @@ export const EventList = (props) => {
 
     return (
         <article className="allEvents">
+            <section>
+                <button className="button" onClick={() => {navigate('events/new')}}> New Running Event</button>
+                    
+            </section>
             {
                 events.map(event => {
                     return <section key={`event--${event.id}`} className="eachEvent">
@@ -31,7 +35,7 @@ export const EventList = (props) => {
 
                                             
                         <button className="button" onClick={() => {
-                            // deleteEvent(event.id).then(updateEventList)
+                            deleteEvent(event.id).then(updateEventList)
                             }}> See Their Events </button>
                     </section>
                 })
