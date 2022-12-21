@@ -34,8 +34,8 @@ export const EventList = (props) => {
                         <div className="event_organizer">Organized by {event?.organizer?.runner_full_name}</div>
 
                         <button className="button" onClick={() => {
-                            updateEvent(event.id).then(navigate("/events/new"))
-                            }}> 🗑 </button>                    
+                            updateEvent(event.id)
+                            }}> I want to run this! </button>                    
                         <button className="button" onClick={() => {
                             deleteEvent(event.id).then(updateEventList)
                             }}> 🗑 </button>
