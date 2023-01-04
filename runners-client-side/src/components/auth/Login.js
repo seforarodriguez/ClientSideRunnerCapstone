@@ -5,7 +5,7 @@ import "./Auth.css"
 
 
 export const Login = () => {
-    const email = useRef()
+    const username = useRef()
     const password = useRef()
     const invalidDialog = useRef()
     const navigate = useNavigate()
@@ -13,13 +13,14 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
         const user = {
-            email: email.current.value,
+            username: username.current.value,
             password: password.current.value
         }
         loginUser(user)
             .then(res => {
                 if ("valid" in res && res.valid && "token" in res) {
                     localStorage.setItem("runner_token", res.token)
+                    localStorage.setItem("runner_Id", res.id)
                     navigate("/")
                 }
                 else {
@@ -31,7 +32,7 @@ export const Login = () => {
     return (
         <main className="container--login">
             <dialog className="dialog dialog--auth" ref={invalidDialog}>
-                <div>Email or password was not valid.</div>
+                <div>Username or password was not valid.</div>
                 <button className="button--close" onClick={e => invalidDialog.current.close()}>Close</button>
             </dialog>
             <section>
@@ -40,7 +41,7 @@ export const Login = () => {
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputUsername"> Username address </label>
-                        <input ref={email} type="email" id="email" className="form-control" placeholder="Emialemail address" required autoFocus />
+                        <input ref={username} type="username" id="username" className="form-control" placeholder="Emialusername address" required autoFocus />
                     </fieldset>
                     <fieldset>
                         <label htmlFor="inputPassword"> Password </label>
