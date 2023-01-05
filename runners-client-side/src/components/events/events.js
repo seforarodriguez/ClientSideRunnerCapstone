@@ -44,7 +44,7 @@ export const EventList = (props) => {
                         <div className="event__miles">Get ready! We're going to be running {event.miles_to_run} miles! </div>
                         <div className="event_organizer">Organized by {event?.organizer?.runner_full_name}</div>
 
-                        {events?.attendees.map(attendee => {
+                        {/* {events?.attendees.map(attendee => {
                             attendee.id === currentRunner.id ?
                                 <button className="button" onClick={() => {
                                 notAttendingEvent(event.id)
@@ -52,7 +52,7 @@ export const EventList = (props) => {
                             : <button className="button" onClick={() => {
                                 attendingEvent(event.id)
                                 }}> I want to run this! </button>
-                        })} 
+                        })}  */}
 
                         <button className="button" onClick={() => {
                             deleteEvent(event.id).then(updateEventList)
