@@ -51,7 +51,7 @@ export const deleteEvent = (id) => {
 
 export const notAttendingEvent = eventId => {
     return fetch(`http://localhost:8000/events/${eventId}/unattend`, {
-        method: "GET",
+        method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Token ${localStorage.getItem("runner_token")}`
@@ -59,14 +59,14 @@ export const notAttendingEvent = eventId => {
         })
   }
   
-  export const attendingEvent = event => {
-    return fetch(`http://localhost:8000/events/${event.id}/attend`, {
-        method: "GET",
+  export const attendingEvent = eventId => {
+    return fetch(`http://localhost:8000/events/${eventId}/attend`, {
+        method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Token ${localStorage.getItem("runner_token")}`
             },
-            body: JSON.stringify(event)
+            body: JSON.stringify(eventId)
         })
         .then(response => response.json())
   }

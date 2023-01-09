@@ -3,6 +3,7 @@ import { Login } from "../auth/Login"
 import { Register } from "../auth/Register"
 import { EventForm } from "../events/eventForm"
 import { EventList } from "../events/events"
+import { EventUpdate } from "../events/eventUpdate"
 import { MainPage } from "../mainPage/MainPage"
 import { ParkList } from "../parks/parks"
 import { RunnerList } from "../runners/runners"
@@ -20,6 +21,7 @@ export const ApplicationViews = () => {
                 {<Route path="/parks" element={<ParkList />} />}
                 {<Route path="/events" element={<EventList />} />}
                 {<Route path="/events/new" element={<EventForm />} />}
+                {<Route path="/events/edit/:eventId" element={<EventUpdate />} />}
                 
             </Route>
         </Routes>
