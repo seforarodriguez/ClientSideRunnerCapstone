@@ -13,7 +13,7 @@ export const NavBar = () => {
             {
                 (localStorage.getItem("runner_token") !== null) ?
 
-                    <button className="nav-aa fakea"
+                    <button className="button-55"
                         onClick={() => {
                             localStorage.removeItem("runner_token")
                             navigate('/login')

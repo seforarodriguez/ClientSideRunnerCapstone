@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getRunners } from "../../managers/RunnersManager"
+import "./runners.css"
 
 export const RunnerList = (props) => {
     const [ runners, setRunners ] = useState([])
@@ -23,18 +24,17 @@ export const RunnerList = (props) => {
 
 
     return (
-        <article className="runners">
+        <article className="runners_container">
             {
                 runners.map(runner => {
-                    return <section key={`runner--${runner.id}`} className="runner">
-                        <div className="runner__name">This runner is called:{runner.runner_full_name}</div>
-                        <div className="runner__miles">This runner has done {runner.mileage} miles </div>
-                        <div className="runner__miles">This runner's expertise is level ....??? </div>
-                        <div className="runner__miles">This runner has done a few events so far </div>
-                        <div className="runner__miles">Here goes a link for the events hes done</div>
+                    return <section key={`runner--${runner.id}`} className="eachRunner">
+                        <div className="runner__name">{runner.runner_full_name}</div>
+                        <div className="runner__miles details">Has ran: {runner.mileage} miles </div>
+                        <div className="runner__expertise details"> Coming Soon... a preview of the events they have been to </div>
+                        <div className="runner__events details"> Coming Soon... Favorite Parks </div>
                         
-                        <button className="button" onClick={() => {
-                            // deleteRunner(runner.id).then(updateRunnerList)
+                        <button className="button-53 details" onClick={() => {
+                            navigate(`/events`)
                             }}> See Their Events </button>
                     </section>
                 })
