@@ -1,0 +1,55 @@
+.events_container {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons_container {
+    padding: 3em;
+    margin: 2rem;
+    box-shadow: -1px 6px 7px;
+    background-color: #fffcf994;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.eachEvent {
+    padding: 3em;
+    margin: 2rem;
+    box-shadow: -5px 6px 7px;
+    background-color: #fffcf994;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: grid;
+   grid-template-columns: repeat(2, 2fr);
+}
+
+.buttons_container {
+    display: grid;
+   grid-template-columns: repeat(2, 2fr);
+}
+
+
+.details {
+    padding: .5rem;
+}
+
+.event__name {
+    font-size: 1rem bold;
+}
+
+.form--events {
+    background-size: cover;
+    background-position-x: center;
+    /* background-image: url('./logo.png'); */
+    z-index: 1;
+    min-height: 100rem;
+    min-width: 45rem;
+    padding: 0 5rem;
+    background-color: hsla(0,0%,100%,0.75);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,27 @@
+.parks_container {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.eachPark {
+    padding: 3em;
+    margin: 2rem;
+    box-shadow: -5px 6px 7px;
+    background-color: #fffcf994;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: grid;
+   grid-template-columns: repeat(2, 2fr);
+
+}
+
+.details {
+    padding: .6rem;
+}
+
+.park__name {
+    font-size: 1rem bold;
+}

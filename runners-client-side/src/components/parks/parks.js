@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getParks } from "../../managers/ParksManager"
+import "./parks.css"
 
 export const ParkList = (props) => {
     const [ parks, setParks ] = useState([])
@@ -23,20 +24,20 @@ export const ParkList = (props) => {
 
 
     return (
-        <article className="parks">
+        <article className="parks_container">
             {
                 parks.map(park => {
-                    return <section key={`park--${park.id}`} className="park">
-                        <div className="park__name">This park is called:{park.name}</div>
-                        <div className="park__address">{park.address}</div>
-                        <div className="park__city">{park.city}, {park.zipcode}</div>
-                        <div className="park__county">{park.county}</div>
-                        <div className="park__miles">This park has {park.miles_available_to_run} miles available to run</div>
-                        <div className="park__difficulty">Level of difficulty: {park.difficulty}</div>
+                    return <section key={`park--${park.id}`} className="eachPark">
+                        <div className="park__name">{park.name}</div>
+                        <div className="details park__address">{park.address}</div>
+                        <div className="details park__city">{park.city}, {park.zipcode}</div>
+                        <div className="details park__county">{park.county}</div>
+                        <div className="details park__miles">This park has {park.miles_available_to_run} miles available to run</div>
+                        <div className="details park__difficulty">Level of difficulty: {park.difficulty}</div>
 
                         
-                        <button className="button" onClick={() => {
-                            // deletePark(park.id).then(updateParkList)
+                        <button className="button-53 details" onClick={() => {
+                            navigate(`/events`)
                             }}> See Their Events </button>
                     </section>
                 })

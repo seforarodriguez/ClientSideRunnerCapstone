@@ -4,34 +4,26 @@ import "./NavBar.css"
 export const NavBar = () => {
     const navigate = useNavigate()
     return (
-        <ul className="navbar">
-            <li className="navbar__item">
-            <Link className="nav-link" to="/runners">Runners</Link>
-            </li>
-            <li className="navbar__item">
-            <Link className="nav-link" to="/parks">Parks</Link>
-            </li>
-            <li className="navbar__item">
-            <Link className="nav-link" to="/events">Running Events</Link>
-            </li>
+
+
+        <div className="container red topBotomBordersOut">
+            <a className="nav-aa" href="/runners">Runners</a>
+            <a className="nav-aa" href="/parks">Parks</a>
+            <a className="nav-aa" href="/events">Running Events</a>
             {
                 (localStorage.getItem("runner_token") !== null) ?
-                    <li className="nav-item">
-                        <button className="nav-link fakeLink"
-                            onClick={() => {
-                                localStorage.removeItem("runner_token")
-                                navigate('/login')
-                            }}
-                        >Logout</button>
-                    </li> :
+
+                    <button className="button-55"
+                        onClick={() => {
+                            localStorage.removeItem("runner_token")
+                            navigate('/login')
+                        }}
+                    >Logout</button>
+                    :
                     <>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/register">Register</Link>
-                        </li>
+                        <a className="nav-aa" href="/login">Login</a>
+                        <a className="nav-aa" href="/register">Register</a>
                     </>
-            }        </ul>
+            }</div>
     )
 }

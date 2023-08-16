@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from 'react-router-dom'
 import { createEvent } from "../../managers/EventsManager"
 import { getParks } from "../../managers/ParksManager"
+import "./events.css"
 
 
 export const EventForm = () => {
@@ -32,7 +33,7 @@ export const EventForm = () => {
     }
 
     return (
-        <form className="eventForm">
+        <form className="eventForm form--events form-control">
             <h2 className="eventForm__title">Register New Event</h2>
             <fieldset>
                 <div className="form-group">

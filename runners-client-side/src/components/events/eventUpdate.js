@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 import { createEvent, getSingleEvent, updateEvent } from "../../managers/EventsManager"
-import { get } from "../../managers/ParksManager"
+
 
 
 export const EventUpdate = () => {
