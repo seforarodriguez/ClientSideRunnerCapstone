@@ -28,7 +28,7 @@ export const ParkList = (props) => {
             {
                 parks.map(park => {
                     return <section key={`park--${park.id}`} className="eachPark">
-                        <div className="park__name">This park is called:{park.name}</div>
+                        <div className="park__name">{park.name}</div>
                         <div className="details park__address">{park.address}</div>
                         <div className="details park__city">{park.city}, {park.zipcode}</div>
                         <div className="details park__county">{park.county}</div>
