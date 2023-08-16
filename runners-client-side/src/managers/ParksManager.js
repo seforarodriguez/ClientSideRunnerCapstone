@@ -1,5 +1,5 @@
 export const getParks = () => {
-    return fetch("http://localhost:8000/parks", {
+    return fetch("http://https://seashell-app-6vvpc.ondigitalocean.app/parks", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("runner_token")}`
         }
