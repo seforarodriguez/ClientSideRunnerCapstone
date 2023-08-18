@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { attendingEvent, deleteEvent, getEvents, notAttendingEvent, updateEvent } from "../../managers/EventsManager"
+import { attendingEvent, deleteEvent, getEvents, notAttendingEvent } from "../../managers/EventsManager"
 import "./events.css"
 
 export const EventList = (props) => {
