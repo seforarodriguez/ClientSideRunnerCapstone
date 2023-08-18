@@ -1,5 +1,5 @@
 export const loginUser = (user) => {
-    return fetch("http://https://seashell-app-6vvpc.ondigitalocean.app/login", {
+    return fetch("https://seashell-app-6vvpc.ondigitalocean.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
