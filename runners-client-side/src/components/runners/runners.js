@@ -33,7 +33,7 @@ export const RunnerList = (props) => {
                         <div className="runner__expertise details"> Coming Soon... a preview of the events they have been to </div>
                         <div className="runner__events details"> Coming Soon... Favorite Parks </div>
                         
-                        <button className="button-53 details" onClick={() => {
+                        <button className="button-32 details" onClick={() => {
                             navigate(`/events`)
                             }}> See Their Events </button>
                     </section>

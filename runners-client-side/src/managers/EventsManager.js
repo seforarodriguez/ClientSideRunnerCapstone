@@ -1,5 +1,5 @@
 export const getEvents = () => {
-    return fetch("http://https://seashell-app-6vvpc.ondigitalocean.app/events", {
+    return fetch("https://seashell-app-6vvpc.ondigitalocean.app/events", {
         headers:{
             "Authorization": `Token ${localStorage.getItem("runner_token")}`
         }
@@ -8,7 +8,7 @@ export const getEvents = () => {
 }
 
 export const createEvent = (event) => {
-    return fetch("http://https://seashell-app-6vvpc.ondigitalocean.app/events", {
+    return fetch("https://seashell-app-6vvpc.ondigitalocean.app/events", {
         method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export const createEvent = (event) => {
 }
 
 export const getSingleEvent = (id) => {
-    return fetch(`http://https://seashell-app-6vvpc.ondigitalocean.app/events/${id}`, {
+    return fetch(`https://seashell-app-6vvpc.ondigitalocean.app/events/${id}`, {
         headers:{
             "Authorization": `Token ${localStorage.getItem("runner_token")}`
         }
@@ -29,7 +29,7 @@ export const getSingleEvent = (id) => {
 }
 
 export const updateEvent = (event) => {
-    return fetch(`http://https://seashell-app-6vvpc.ondigitalocean.app/events/${event.id}`, {
+    return fetch(`https://seashell-app-6vvpc.ondigitalocean.app/events/${event.id}`, {
         method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export const updateEvent = (event) => {
 }
 
 export const deleteEvent = (id) => {
-    return fetch(`http://https://seashell-app-6vvpc.ondigitalocean.app/events/${id}`, {
+    return fetch(`https://seashell-app-6vvpc.ondigitalocean.app/events/${id}`, {
         method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const deleteEvent = (id) => {
 }
 
 export const notAttendingEvent = eventId => {
-    return fetch(`http://https://seashell-app-6vvpc.ondigitalocean.app/events/${eventId}/unattend`, {
+    return fetch(`https://seashell-app-6vvpc.ondigitalocean.app/events/${eventId}/unattend`, {
         method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -60,7 +60,7 @@ export const notAttendingEvent = eventId => {
   }
   
   export const attendingEvent = eventId => {
-    return fetch(`http://https://seashell-app-6vvpc.ondigitalocean.app/events/${eventId}/attend`, {
+    return fetch(`https://seashell-app-6vvpc.ondigitalocean.app/events/${eventId}/attend`, {
         method: "POST",
             headers: {
                 "Content-Type": "application/json",

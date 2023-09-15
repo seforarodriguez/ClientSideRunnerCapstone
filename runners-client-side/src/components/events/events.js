@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { attendingEvent, deleteEvent, getEvents, notAttendingEvent, updateEvent } from "../../managers/EventsManager"
+import { attendingEvent, deleteEvent, getEvents, notAttendingEvent } from "../../managers/EventsManager"
 import "./events.css"
 
 export const EventList = (props) => {
@@ -43,8 +43,8 @@ export const EventList = (props) => {
     return (
         <>
         <section className="buttons_container">
-                <button className="button-53" onClick={() => {navigate("/events/new")}}> New Running Event</button>
-                <button className="button-53" onClick={() => {goingToEvent === false? setGoingToEvent(true): setGoingToEvent(false)}}>Events Attending</button>
+                <button className="button-32" onClick={() => {navigate("/events/new")}}> New Running Event</button>
+                <button className="button-32" onClick={() => {goingToEvent === false? setGoingToEvent(true): setGoingToEvent(false)}}>Events Attending</button>
                     
         </section>
         <article className="events_container">
@@ -61,13 +61,13 @@ export const EventList = (props) => {
                         </section>
 
                         <section className="items_inside">
-                            {event?.going ? <button className='button-53' onClick={(ev)=>notAttendingEvent(event.id).then(updateEventList)}>Already attending, unattend? </button>                    
-                            :<button className='button-53' onClick={(ev)=>attendingEvent(event.id).then(updateEventList)}> Attend</button>}
+                            {event?.going ? <button className='button-32' onClick={(ev)=>notAttendingEvent(event.id).then(updateEventList)}>Already attending, unattend? </button>                    
+                            :<button className='button-32' onClick={(ev)=>attendingEvent(event.id).then(updateEventList)}> Attend</button>}
                             
-                            <button className="button-53" onClick={() => {
+                            <button className="button-32" onClick={() => {
                                 navigate(`/events/edit/${event.id}`)
                             }}> Change Date or Time </button>
-                            <button className="button-53" onClick={() => {
+                            <button className="button-32" onClick={() => {
                                 deleteEvent(event.id).then(updateEventList)
                             }}> 🗑 </button>
                         </section>
