@@ -36,9 +36,9 @@ export const ParkList = (props) => {
                         <div className="details park__difficulty">Level of difficulty: {park.difficulty}</div>
 
                         
-                        <button className="button-53 details" onClick={() => {
+                        {/* <button className="button-53 details" onClick={() => {
                             navigate(`/events`)
-                            }}> See Their Events </button>
+                            }}> See Events Available </button> */}
                     </section>
                 })
             }
